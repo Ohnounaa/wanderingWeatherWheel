@@ -2,7 +2,6 @@ package com.example.movingmovies
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 
@@ -14,9 +13,10 @@ class MainActivity : AppCompatActivity() {
         val arr: MutableList<String> = getImageUris()
         //val arr: MutableList<String> = getDummyStrings()
         val rv = findViewById<RecyclerView>(R.id.rv)
-        rv.layoutManager = LinearLayoutManager(this, RecyclerView.HORIZONTAL, false)
-        val dividerItemDecoration = CustomDividerItemDecoration()
-        rv?.addItemDecoration(dividerItemDecoration)
+       rv.layoutManager = MagnifyingLayoutManager(this)
+       // rv.layoutManager = LinearLayoutManager(this, RecyclerView.HORIZONTAL, false)
+        //val dividerItemDecoration = CustomDividerItemDecoration()
+        //rv?.addItemDecoration(dividerItemDecoration)
         rv.adapter = MoviesRecyclerViewAdapter(arr)
     }
 
