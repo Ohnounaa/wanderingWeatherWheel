@@ -1,4 +1,4 @@
-package com.example.movingmovies
+package com.example.wanderingWeatherWheel
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -13,7 +13,7 @@ class MoviesRecyclerViewAdapter(val arr: MutableList<String>) : RecyclerView.Ada
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(ImageView(parent.context).apply{
             layoutParams = RecyclerView.LayoutParams(
-                RecyclerView.LayoutParams.MATCH_PARENT,
+                RecyclerView.LayoutParams.WRAP_CONTENT,
                 RecyclerView.LayoutParams.MATCH_PARENT
             )
         })

@@ -1,4 +1,4 @@
-package com.example.movingmovies
+package com.example.wanderingWeatherWheel
 
 import org.junit.Test
 
